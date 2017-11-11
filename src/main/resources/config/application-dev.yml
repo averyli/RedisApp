@@ -47,17 +47,26 @@ spring:
             hibernate.cache.region.factory_class: io.github.jhipster.config.jcache.NoDefaultJCacheRegionFactory
     data:
         elasticsearch:
-            cluster-name:
-            cluster-nodes:
+            cluster-name: elasticsearch
+            cluster-nodes: 192.168.1.103:9300,192.168.1.103:9301
             properties:
                 path:
                     logs: target/elasticsearch/log
                     data: target/elasticsearch/data
+    redis:
+      cluster:
+        nodes:
+            -127.0.0.1:6100
+            -127.0.0.1:6200
+            -127.0.0.1:6300
+            -127.0.0.1:6400
+            -127.0.0.1:6500
+            -127.0.0.1:6600
     mail:
-        host: localhost
+        host: smtp.mxhichina.com
         port: 25
-        username:
-        password:
+        username: avery@nexttrucking.com.cn
+        password: ll@940302
     messages:
         cache-seconds: 1
     thymeleaf:
@@ -108,7 +117,7 @@ jhipster:
         allow-credentials: true
         max-age: 1800
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: RedisApp@localhost
+        from: avery@nexttrucing.com.cn
         base-url: http://127.0.0.1:8080
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
